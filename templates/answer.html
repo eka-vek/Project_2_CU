@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Results</title>
+</head>
+<body>
+    <h1>Weather Check Results</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Location</th>
+                <th>Weather Advice</th>
+                <th>Temperature (°C)</th>
+                <th>Humidity (%)</th>
+                <th>Wind Speed (km/h)</th>
+                <th>Rain Probability (%)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for data in weather_data %}
+                <tr>
+                    <td>{{ data.location }}</td>
+                    <td>{{ data.weather_advice }}</td>
+                    <td>{{ data.temperature_c }}</td>
+                    <td>{{ data.humidity }}</td>
+                    <td>{{ data.wind_speed }}</td>
+                    <td>{{ data.rain_probability }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
